@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# 認証情報を含みうるローカル設定
+.env
+.env.*
+!.env.example
+
+# 一時ファイル
+*.tmp
+~$*
