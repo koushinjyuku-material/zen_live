@@ -1,0 +1,93 @@
+\input{style.tex}
+\hypersetup{pdftitle={熱力学 基本演習4題 問題},pdfauthor={Zenstudy 教材制作}}
+\begin{document}
+\begin{frame}[t]{1\quad 三角形のサイクル}
+\tagline{状態の変化と、気体がする仕事}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.56\textwidth}
+\small
+$n\,\mathrm{mol}$ の単原子分子理想気体を、図の
+$\mathrm{A\to B\to C\to A}$ の順にゆっくり変化させる。
+AB は $p$-$V$ 図上の直線である。\par
+$p_0,V_0>0$ とし、A の温度を $T_0$、気体定数を $R$ とする。
+\ask{1}{B、C の温度を、それぞれ $T_0$ を用いて表せ。}
+\ask{2}{各過程の $W,\Delta U,Q$ を、$p_0V_0$ を用いて表せ。}
+\ask{3}{1 周で気体がする正味の仕事と、この熱機関の熱効率 $\eta$ を求めよ。}
+\end{column}
+\begin{column}{.40\textwidth}
+\centering\resizebox{\linewidth}{!}{\cyclefig}
+\end{column}
+\end{columns}
+\vfill
+{\scriptsize $W$：気体が外部にした仕事（膨張で正）\quad $Q$：気体が吸収した熱量（放熱で負）\\
+$U=\frac32nRT,\quad Q=\Delta U+W$\quad 熱効率は「正味の仕事／吸収した熱量」で求める。}
+\end{frame}
+
+\begin{frame}[t]{2\quad ピストンでつなぐ3つの変化\quad 〔設定〕}
+\tagline{定圧変化・定積変化・断熱変化}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{.55\textwidth}\small
+水平に置いた断熱円筒に、$n\,\mathrm{mol}$ の単原子分子理想気体を閉じ込める。\par
+断面積 $S$ のピストンは軽く、摩擦なく動く。外側は真空で、外力 $F$ を調整してゆっくり動かせる。\par
+熱の出入りは開閉式の熱窓で行う。気体は漏れず、熱窓を閉じると全体が断熱される。\par
+初めの状態 A は $p_0,V_0,T_0$ であり、
+\[p_0V_0=nRT_0\]
+が成り立つ。次ページの操作を順に行う。
+\end{column}
+\begin{column}{.42\textwidth}
+\centering\vspace{4mm}\pistonfig\par\vspace{3mm}
+{\scriptsize 固定を外して動かすとき、外力は気体がピストンに及ぼす力とつり合うように調整する。}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]{2\quad ピストンでつなぐ3つの変化\quad 〔操作・設問〕}
+\small
+\textcolor{accent}{\textbf{I\quad A$\to$B}}\quad 圧力を $p_0$ に保って加熱し、体積を $2V_0$ にする。\par
+\textcolor{accent}{\textbf{II\quad B$\to$C}}\quad ピストンを固定し、温度が $T_0$ になるまで冷却する。\par
+\textcolor{accent}{\textbf{III\quad C$\to$D}}\quad 熱窓を閉じる。外力をつり合う値に調整して固定を外し、
+外力を徐々に増やして、体積が $V_0$ になるまでゆっくり圧縮する。
+\vspace{1mm}\hrule\vspace{1mm}
+\ask{1}{B、C の圧力と温度を、$p_0,T_0$ を用いて表せ。}
+\ask{2}{操作 I、II のそれぞれで、気体がした仕事 $W$ と吸収した熱量 $Q$ を求めよ。}
+\ask{3}{D の温度と、操作 III で\textbf{気体が外部からされた仕事} $W_{\mathrm{on}}$ を求めよ。}
+\vfill
+{\scriptsize $pV=nRT,\quad U=\frac32nRT,\quad Q=\Delta U+W$ を用いてよい。\\
+断熱変化では $pV^{5/3}=\text{一定}$。$Q$ は吸熱で正、$W$ は膨張で正とする。}
+\end{frame}
+
+\begin{frame}[t]{3\quad 基本の確認：状態方程式と内部エネルギー}
+\tagline{圧力・体積から、温度と内部エネルギーへ}
+\normalsize
+物質量 $0.50\,\mathrm{mol}$ の単原子分子理想気体が、
+次の状態にある。
+\begin{block}{初めの状態}
+\centering $p=1.0\times10^5\,\mathrm{Pa},\qquad V=1.2\times10^{-2}\,\mathrm{m^3}$
+\end{block}
+気体定数は $R=8.0\,\mathrm{J/(mol\cdot K)}$ とする。
+\ask{1}{初めの絶対温度 $T$ と内部エネルギー $U$ を求めよ。}
+\ask{2}{体積を変えずに加熱し、圧力を $1.5\times10^5\,\mathrm{Pa}$ にした。
+加熱後の温度 $T'$ と、内部エネルギーの変化 $\Delta U$ を求めよ。}
+\vfill {\small $pV=nRT,\qquad U=\frac32nRT$ を用いてよい。}
+\end{frame}
+
+\begin{frame}[t]{4\quad 基本の確認：熱・仕事・内部エネルギー}
+\tagline{熱力学第一法則の符号を確かめる}
+\small
+一定量の単原子分子理想気体について、下の空欄を埋めよ。\par
+また、各変化で温度が「上がる・下がる・変わらない」のどれかを答えよ。\par
+\vspace{3mm}
+\renewcommand{\arraystretch}{1.55}
+\centering
+\begin{tabular}{p{6.1cm}ccc}
+\toprule
+変化 & $Q\,[\mathrm{J}]$ & $W\,[\mathrm{J}]$ & $\Delta U\,[\mathrm{J}]$\\\midrule
+(a) 熱を吸収しながら膨張 & $+500$ & $+200$ & \underline{\hspace{9mm}}\\
+(b) 体積を固定したまま冷却 & $-240$ & \underline{\hspace{9mm}} & \underline{\hspace{9mm}}\\
+(c) 断熱圧縮で、外部から $160\,\mathrm{J}$ の仕事をされた & \underline{\hspace{9mm}} & \underline{\hspace{9mm}} & \underline{\hspace{9mm}}\\
+\bottomrule
+\end{tabular}
+\par\vfill\raggedright
+{\small $Q=\Delta U+W$\quad（$Q$：気体が吸収した熱量、$W$：気体が外部にした仕事）}
+\end{frame}
+\end{document}
