@@ -1,82 +1,147 @@
 \input{style.tex}
-\hypersetup{pdftitle={熱力学 基本演習4題 問題 改訂版},pdfauthor={Zenstudy 教材制作}}
+\hypersetup{pdftitle={熱力学 基本演習4題 問題 28ポイント版},pdfauthor={Zenstudy 教材制作}}
 \begin{document}
-\pagehead{第1問\quad 三角形のサイクル}
-\begin{minipage}[t]{.59\textwidth}\vspace{0pt}\raggedright
-$n\,\mathrm{mol}$ の単原子分子理想気体を、図の
-$\mathrm{A\to B\to C\to A}$ の順にゆっくり変化させる。
-BC は $p$-$V$ 図上の直線であり、この過程では全区間で吸熱する。\par
+\pagehead{第1問　三角形のサイクル／設定}
+\cols{
+$n\,\mathrm{mol}$ の単原子分子理想気体を、図の順にゆっくり変化させる。
+\[
+\mathrm{A\to B\to C\to A}
+\]
+BC は直線で、この過程では全区間で吸熱する。\par
 $p_0,V_0>0$ とし、A の温度を $T_0$、気体定数を $R$ とする。
+}{\centering\cyclefig}
+
+\newpage
+\pagehead{第1問　三角形のサイクル／設問}
+\cols{
 \ask{1}{B、C の温度を、それぞれ $T_0$ を用いて表せ。}
 \ask{2}{各過程の仕事 $W$、内部エネルギーの変化 $\Delta U$、熱量 $Q$ を、$p_0V_0$ を用いて表せ。}
-\ask{3}{1周で気体がする正味の仕事と、熱効率 $\eta$ を求めよ。}
-\end{minipage}\hfill
-\begin{minipage}[t]{.37\textwidth}\vspace{4mm}\centering
-\resizebox{\linewidth}{!}{\cyclefig}
-\end{minipage}
-\vfill
-\note{$W$：気体が外部にした仕事（膨張で正）\quad $Q$：気体が吸収した熱量（放熱で負）。\\
-$U=\frac32nRT,\quad Q=\Delta U+W$。熱効率は「正味の仕事／吸収した熱量」で求める。}
+\ask{3}{1周の正味の仕事と、熱効率 $\eta$ を求めよ。}
+}{
+\labelhead{使ってよい関係式}
+\[
+U=\frac32nRT,\quad Q=\Delta U+W
+\]
+$W$ は気体が外部にした仕事で、膨張のとき正。\par
+$Q$ は気体が吸収した熱量で、放熱のとき負。\par
+熱効率は、正味の仕事を吸収した熱量で割った値。
+}
 
 \newpage
-\pagehead{第2問\quad 鉛直ピストンの状態変化\quad 〔設定〕}
-\begin{minipage}[t]{.61\textwidth}\vspace{0pt}\raggedright
-鉛直に置いた断熱円筒に、$n\,\mathrm{mol}$ の単原子分子理想気体を閉じ込める。\par
-ピストンの質量は $M$、断面積は $S$ であり、摩擦なく上下に動く。上側の大気圧を $p_{\mathrm a}$、重力加速度を $g$ とする。\par
-熱の出入りは開閉式の出入り口で行い、閉じると円筒・ピストンを通した熱の移動はない。気体は漏れない。\par
-初めは追加の外力を加えずに静止しており、気体の圧力・体積・温度を $p_0,V_0,T_0$ とする。
-\ask{1}{圧力 $p_0$ を、$p_{\mathrm a},M,S,g$ を用いて表せ。}
-\end{minipage}\hfill
-\begin{minipage}[t]{.35\textwidth}\vspace{0pt}\centering
-\resizebox{\linewidth}{!}{\pistonfig}\par
-\note{初期状態 A（追加の外力なし）}
-\end{minipage}
-\vfill
-\note{$p_0V_0=nRT_0$。以後の操作は、気体とピストンがほぼつり合いを保つように十分ゆっくり行う。}
+\pagehead{第2問　鉛直ピストン／装置}
+\cols{
+鉛直な断熱円筒に、$n\,\mathrm{mol}$ の単原子分子理想気体を閉じ込める。\par
+ピストンの質量は $M$、断面積は $S$ で、摩擦なく上下に動く。\par
+上側の大気圧は $p_{\mathrm a}$、重力加速度は $g$ とする。
+}{\centering\pistonfig}
 
 \newpage
-\pagehead{第2問\quad 鉛直ピストンの状態変化\quad 〔操作・設問〕}
-{\fontsize{18}{24}\selectfont
-\textbf{I\quad A$\to$B}\quad 追加の外力を加えずに加熱し、体積を $2V_0$ にする。\par
-\textbf{II\quad B$\to$C}\quad ピストンを固定し、さらに加熱して温度を $4T_0$ にする。\par
-\textbf{III\quad C$\to$D}\quad 熱の出入り口を閉じる。下向きの外力 $F$ をつり合う値にして固定を外し、$F$ を徐々に増やして、体積が $V_0$ になるまで圧縮する。\par}
-\vspace{3mm}\hrule\vspace{3mm}
+\pagehead{第2問　鉛直ピストン／初期状態・操作}
+\cols{
+熱の出入り口は開閉でき、閉じると熱は移動しない。気体は漏れない。\par
+初めは追加の外力なしで静止している。圧力・体積・温度を $p_0,V_0,T_0$ とする。
+\ask{1}{$p_0$ を $p_{\mathrm a},M,S,g$ で表せ。}
+}{
+\labelhead{I　A$\to$B}
+追加の外力を加えずに加熱し、体積を $2V_0$ にする。\par
+\labelhead{II　B$\to$C}
+ピストンを固定し、さらに加熱して温度を $4T_0$ にする。\par
+操作 I〜III は、ほぼつり合いを保つように十分ゆっくり行う。
+}
+
+\newpage
+\pagehead{第2問　鉛直ピストン／続き}
+\cols{
+\labelhead{III　C$\to$D}
+熱の出入り口を閉じる。\par
+下向きの外力 $F$ をつり合う値に調整し、固定を外す。\par
+$F$ を徐々に増やして、体積が $V_0$ になるまで圧縮する。
+}{
 \ask{2}{B、C の圧力と温度を、$p_0,T_0$ を用いて表せ。}
 \ask{3}{操作 I、II のそれぞれで、気体がした仕事 $W$ と吸収した熱量 $Q$ を求めよ。}
-\ask{4}{D の温度と、操作 III で\textbf{気体が外部からされた仕事} $W_{\mathrm{on}}$ を求めよ。}
-\vfill
-\note{$pV=nRT,\quad U=\frac32nRT,\quad Q=\Delta U+W$ を用いてよい。\\
-断熱変化では $pV^{5/3}=\text{一定}$。$Q$ は吸熱で正、$W$ は膨張で正とする。}
+\ask{4}{D の温度と、操作 III で気体が外部からされた仕事 $W_{\mathrm{on}}$ を求めよ。}
+}
 
 \newpage
-\pagehead{第3問\quad 状態方程式と内部エネルギー}
-物質量 $0.50\,\mathrm{mol}$ の単原子分子理想気体が、次の状態にある。
+\pagehead{第2問　鉛直ピストン／使ってよい関係式}
+\cols{
+状態方程式と内部エネルギーは、
 \[
-p=1.0\times10^5\,\mathrm{Pa},\qquad V=1.2\times10^{-2}\,\mathrm{m^3}.
+pV=nRT,\quad U=\frac32nRT.
 \]
-気体定数を $R=8.0\,\mathrm{J/(mol\cdot K)}$ とする。
-\ask{1}{初めの絶対温度 $T$ と内部エネルギー $U$ を求めよ。}
-\ask{2}{体積を変えずに加熱し、圧力を $1.5\times10^5\,\mathrm{Pa}$ にした。\\
-加熱後の温度 $T'$ と、内部エネルギーの変化 $\Delta U$ を求めよ。}
-\vfill
-\note{$pV=nRT,\qquad U=\frac32nRT$ を用いてよい。}
+初期状態について、
+\[
+p_0V_0=nRT_0.
+\]
+断熱変化では、
+\[
+pV^{5/3}=\text{一定}.
+\]
+}{
+熱力学第1法則は、
+\[
+Q=\Delta U+W.
+\]
+$W$ は気体が外部にした仕事で、膨張のとき正。\par
+$Q$ は気体が吸収した熱量で、放熱のとき負。\par
+$W_{\mathrm{on}}$ は、外部から気体にされた仕事の総量とする。
+}
 
 \newpage
-\pagehead{第4問\quad 基本の確認：熱気球が浮く条件}
-\begin{minipage}[t]{.67\textwidth}\vspace{0pt}\raggedright
-体積 $V=1.0\times10^3\,\mathrm{m^3}$ の熱気球を考える。\\
-内部の空気を除いた本体・かごなどの質量は $M=300\,\mathrm{kg}$ である。\par
-外気の温度は $T_0=300\,\mathrm K$、密度は $\rho_0=1.2\,\mathrm{kg/m^3}$。
-下部が開いているため内外の圧力は等しく、加熱中も体積は一定である。
-内部の温度は一様で、内外の空気を同じ理想気体として扱う。$g=10\,\mathrm{m/s^2}$ とする。
-\ask{1}{内部の温度が $400\,\mathrm K$ のとき、内部の空気の密度 $\rho$ を求めよ。}
+\pagehead{第3問　状態方程式と内部エネルギー}
+\cols{
+単原子分子理想気体が、次の状態にある。
+\begin{align*}
+n&=0.50\,\mathrm{mol},\\
+p&=1.0\times10^5\,\mathrm{Pa},\\
+V&=1.2\times10^{-2}\,\mathrm{m^3}.
+\end{align*}
+気体定数は、
+\[
+R=8.0\,\mathrm{J/(mol\cdot K)}.
+\]
+}{
+\ask{1}{初めの絶対温度 $T$ と内部エネルギー $U$ を求めよ。}
+\ask{2}{体積を変えずに加熱し、圧力を $1.5\times10^5\,\mathrm{Pa}$ にした。加熱後の温度 $T'$ と内部エネルギーの変化 $\Delta U$ を求めよ。}
+\[
+pV=nRT,\quad U=\frac32nRT
+\]
+を用いてよい。
+}
+
+\newpage
+\pagehead{第4問　熱気球が浮く条件／設定}
+\cols{
+熱気球の体積は、
+\[
+V=1.0\times10^3\,\mathrm{m^3}.
+\]
+内部の空気を除いた本体・かごなどの質量は、
+\[
+M=300\,\mathrm{kg}.
+\]
+外気の温度と密度は、
+\[
+T_0=300\,\mathrm K,
+\]
+\[
+\rho_0=1.2\,\mathrm{kg/m^3}.
+\]
+}{\centering\balloonfig}
+
+\newpage
+\pagehead{第4問　熱気球が浮く条件／設問}
+\cols{
+下部が開いているため内外の圧力は等しく、加熱中も体積は一定である。\par
+内部の温度は一様で、内外の空気を同じ理想気体とする。
+\[
+g=10\,\mathrm{m/s^2}.
+\]
+一定圧力では $\rho T=\text{一定}$。浮力は、押しのけた外気の重さに等しい。
+}{
+\ask{1}{内部の温度が $400\,\mathrm K$ のとき、空気の密度 $\rho$ を求めよ。}
 \ask{2}{このときの浮力と、気球全体に働く上向きの合力を求めよ。}
-\ask{3}{静止状態から浮き上がるために、内部の温度 $T$ が満たす条件を求めよ。}
-\end{minipage}\hfill
-\begin{minipage}[t]{.29\textwidth}\vspace{4mm}\centering
-\resizebox{\linewidth}{!}{\balloonfig}
-\end{minipage}
-\vfill
-\note{一定圧力の同じ気体では $\rho T=\text{一定}$。浮力は、押しのけた外気の重さに等しい。\\
-気球の体積以外による浮力、空気抵抗は無視する。}
+\ask{3}{静止状態から浮き上がるための、温度 $T$ の条件を求めよ。}
+気球の体積以外による浮力と空気抵抗は無視する。
+}
 \end{document}

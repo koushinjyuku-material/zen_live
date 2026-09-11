@@ -1,141 +1,406 @@
 \input{style.tex}
-\hypersetup{pdftitle={熱力学 基本演習4題 解答 改訂版},pdfauthor={Zenstudy 教材制作}}
+\hypersetup{pdftitle={熱力学 基本演習4題 解答 第3版},pdfauthor={Zenstudy 教材制作}}
 \begin{document}
-\pagehead{第1問\quad 三角形のサイクル\quad 〔温度・仕事〕}
-\begin{minipage}[t]{.59\textwidth}\vspace{0pt}\raggedright
-\textbf{(1)} $pV=nRT$ より、$T\propto pV$ である。
+
+% 1 / 14
+\pagehead{第1問\quad 三角形のサイクル：温度}
+\cols{
+\labelhead{(1) 各状態の温度}
+状態方程式から、\par
 \[
-\boxed{T_{\mathrm B}=2T_0},\qquad \boxed{T_{\mathrm C}=3T_0}.
+pV=nRT.
 \]
-\textbf{(2)} AB は定積変化なので仕事は0。BC の仕事は台形の面積、CA は圧縮なので負である。
-\begin{align*}
+物質量は一定なので、\par
+温度は $pV$ に比例する。
+\[
+\begin{aligned}
+T_{\mathrm B}&=\boxed{2T_0},\\
+T_{\mathrm C}&=\boxed{3T_0}.
+\end{aligned}
+\]
+}{\centering\cyclefig}
+
+% 2 / 14
+\newpage
+\pagehead{第1問\quad 仕事・内部エネルギー・熱量：前半}
+\cols{
+\labelhead{(2) A$\to$B}
+定積変化なので仕事は0。
+\[
+\begin{aligned}
 W_{\mathrm{AB}}&=\boxed{0},\\
-W_{\mathrm{BC}}&=\frac{2p_0+p_0}{2}(3V_0-V_0)=\boxed{3p_0V_0},\\
-W_{\mathrm{CA}}&=p_0(V_0-3V_0)=\boxed{-2p_0V_0}.
-\end{align*}
-\end{minipage}\hfill
-\begin{minipage}[t]{.37\textwidth}\vspace{2mm}\centering
-\resizebox{\linewidth}{!}{\cyclefig}
-\end{minipage}
-
-\newpage
-\pagehead{第1問\quad 三角形のサイクル\quad 〔熱量・効率〕}
-\textbf{(2)} $\displaystyle\Delta U=\frac32nR\Delta T=\frac32\Delta(pV)$、$Q=\Delta U+W$ より、
-\begin{center}
-\renewcommand{\arraystretch}{1.35}
-\begin{tabular}{cccc}
-\toprule 過程 & $W$ & $\Delta U$ & $Q$\\\midrule
-A$\to$B & $0$ & $\frac32p_0V_0$ & $\frac32p_0V_0$\\
-B$\to$C & $3p_0V_0$ & $\frac32p_0V_0$ & $\frac92p_0V_0$\\
-C$\to$A & $-2p_0V_0$ & $-3p_0V_0$ & $-5p_0V_0$\\\bottomrule
-\end{tabular}
-\end{center}
-\textbf{(3)} 1周の仕事は三角形の面積に等しい。AB と BC で吸熱し、CA で放熱する。
+\Delta U_{\mathrm{AB}}&=\frac32p_0V_0,\\
+Q_{\mathrm{AB}}&=\boxed{\frac32p_0V_0}.
+\end{aligned}
+\]
+温度は $T_0$ だけ上昇。\par
+加えた熱はすべて\par
+内部エネルギーになる。
+}{
+\labelhead{(2) B$\to$C}
+仕事は台形の面積。
 \[
-\boxed{W_{\mathrm{net}}=\frac12(p_0)(2V_0)=p_0V_0},\qquad
-Q_{\mathrm{in}}=\frac32p_0V_0+\frac92p_0V_0=6p_0V_0.
+\begin{aligned}
+W_{\mathrm{BC}}&=\frac{2p_0+p_0}{2}(2V_0)\\
+&=\boxed{3p_0V_0},\\
+\Delta U_{\mathrm{BC}}&=\frac32p_0V_0,\\
+Q_{\mathrm{BC}}&=\boxed{\frac92p_0V_0}.
+\end{aligned}
+\]
+}
+
+% 3 / 14
+\newpage
+\pagehead{第1問\quad 仕事・内部エネルギー・熱量：後半}
+\cols{
+\labelhead{(2) C$\to$A}
+圧縮なので仕事は負。
+\[
+\begin{aligned}
+W_{\mathrm{CA}}&=p_0(V_0-3V_0)\\
+&=\boxed{-2p_0V_0},\\
+\Delta U_{\mathrm{CA}}&=-3p_0V_0,\\
+Q_{\mathrm{CA}}&=\boxed{-5p_0V_0}.
+\end{aligned}
+\]
+温度は $2T_0$ だけ下降。\par
+熱量が負なので放熱する。
+}{
+\labelhead{計算式と符号の確認}
+$W$：気体がする仕事。\par
+$Q$：気体が吸収する熱量。
+\[
+Q=\Delta U+W.
 \]
 \[
-\boxed{\eta=\frac{W_{\mathrm{net}}}{Q_{\mathrm{in}}}=\frac16\simeq16.7\%}.
+\begin{aligned}
+\Delta U&=\frac32nR\Delta T\\
+&=\frac32\Delta(pV).
+\end{aligned}
 \]
+1周すると元の状態に戻る。\par
+したがって $\Delta U=0$。
+}
 
+% 4 / 14
 \newpage
-\pagehead{第2問\quad 鉛直ピストン\quad 〔つり合い・各状態〕}
-\textbf{(1)} ピストンに働く上向きの力は $p_0S$、下向きの力は $p_{\mathrm a}S+Mg$。
+\pagehead{第1問\quad 正味の仕事と熱効率}
+\cols{
+\labelhead{(3) 1周の仕事}
+図の三角形の面積に等しい。
 \[
-p_0S=p_{\mathrm a}S+Mg
-\quad\Longrightarrow\quad
+\begin{aligned}
+W_{\mathrm{net}}&=\frac12(p_0)(2V_0)\\
+&=\boxed{p_0V_0}.
+\end{aligned}
+\]
+各過程を足しても同じ。
+\[
+0+3p_0V_0-2p_0V_0=p_0V_0.
+\]
+}{
+\labelhead{(3) 熱効率}
+AB と BC で熱を吸収する。
+\[
+\begin{aligned}
+Q_{\mathrm{in}}&=\frac32p_0V_0+\frac92p_0V_0\\
+&=6p_0V_0.
+\end{aligned}
+\]
+\[
+\eta=\frac{W_{\mathrm{net}}}{Q_{\mathrm{in}}}=\boxed{\frac16}.
+\]
+百分率では約 $16.7\%$。
+}
+
+% 5 / 14
+\newpage
+\pagehead{第2問\quad ピストンに働く力}
+\cols{
+\labelhead{(1) 初期状態のつり合い}
+上向きの力は $p_0S$。\par
+下向きは大気の力と重力。
+\[
+p_0S=p_{\mathrm a}S+Mg.
+\]
+両辺を $S$ で割ると、
+\[
 \boxed{p_0=p_{\mathrm a}+\frac{Mg}{S}}.
 \]
-\textbf{(2)} 操作 I では、大気圧とピストンの重さが一定なので圧力も $p_0$ のままである。\\
-体積が2倍になるため、状態方程式から温度も2倍になる。
-\[
-\boxed{p_{\mathrm B}=p_0,\qquad T_{\mathrm B}=2T_0}.
-\]
-操作 II は体積が $2V_0$ で一定であり、温度が $2T_0$ から $4T_0$ になる。
-\[
-\boxed{p_{\mathrm C}=2p_0,\qquad T_{\mathrm C}=4T_0}.
-\]
-\vfill
-\note{固定を外す直前には $p_{\mathrm C}S=p_{\mathrm a}S+Mg+F$ とするため、$F=p_0S$ に調整する。}
+}{\centering\pistonfig}
 
+% 6 / 14
 \newpage
-\pagehead{第2問\quad 鉛直ピストン\quad 〔熱量・断熱圧縮〕}
-{\fontsize{18}{24}\selectfont
-\textbf{(3) 操作 I（定圧膨張）}
+\pagehead{第2問\quad 定圧変化と定積変化}
+\cols{
+\labelhead{(2) 操作 I：定圧膨張}
+大気圧も重さも一定。\par
+圧力は $p_0$ のままである。
 \[
-W_{\mathrm I}=p_0(2V_0-V_0)=\boxed{p_0V_0},\qquad
-Q_{\mathrm I}=\frac32nR(T_0)+p_0V_0=\boxed{\frac52p_0V_0}.
+\boxed{p_{\mathrm B}=p_0}.
 \]
-\textbf{操作 II（定積加熱）}
+体積が2倍になるので、\par
+温度も2倍になる。
 \[
-\boxed{W_{\mathrm{II}}=0},\qquad
-Q_{\mathrm{II}}=\frac32nR(4T_0-2T_0)=\boxed{3p_0V_0}.
+\boxed{T_{\mathrm B}=2T_0}.
 \]
-\textbf{(4)} $pV^{5/3}=\text{一定}$ と $pV=nRT$ から、$TV^{2/3}=\text{一定}$。
+}{
+\labelhead{(2) 操作 II：定積加熱}
+体積は $2V_0$ のまま。\par
+温度を $4T_0$ まで上げる。
 \[
-4T_0(2V_0)^{2/3}=T_{\mathrm D}V_0^{2/3}
-\quad\Longrightarrow\quad\boxed{T_{\mathrm D}=4\cdot2^{2/3}T_0}.
+\boxed{p_{\mathrm C}=2p_0},\quad
+\boxed{T_{\mathrm C}=4T_0}.
 \]
-断熱変化では $Q=0$ なので、気体がされた仕事は内部エネルギーの増加に等しい。
+\labelhead{固定解除前の外力}
+つり合うよう $F$ を調整する。
 \[
-W_{\mathrm{on}}=\Delta U
-=\frac32nR(T_{\mathrm D}-4T_0)
-=\boxed{6p_0V_0\left(2^{2/3}-1\right)}.
+\begin{aligned}
+p_{\mathrm C}S&=p_{\mathrm a}S+Mg+F,\\
+F&=p_0S.
+\end{aligned}
 \]
-\par}
-\vfill
-\note{ここで $W_{\mathrm{on}}$ は外部から気体にされた仕事の総量。追加の外力 $F$ だけの仕事ではない。}
+}
 
+% 7 / 14
 \newpage
-\pagehead{第3問\quad 状態方程式と内部エネルギー\quad 〔解答〕}
-\textbf{(1)} 初めの温度と内部エネルギーは、
+\pagehead{第2問\quad 気体がする仕事と吸収熱量}
+\cols{
+\labelhead{(3) 操作 I：定圧膨張}
 \[
-T=\frac{pV}{nR}
-=\frac{(1.0\times10^5)(1.2\times10^{-2})}{0.50\times8.0}
-=\boxed{3.0\times10^2\,\mathrm K},
+\begin{aligned}
+W_{\mathrm I}&=p_0(2V_0-V_0)\\
+&=\boxed{p_0V_0}.
+\end{aligned}
+\]
+温度は $T_0$ だけ上昇する。
+\[
+\Delta U_{\mathrm I}=\frac32p_0V_0.
 \]
 \[
-U=\frac32nRT=\frac32pV
-=\frac32\times1.2\times10^3
-=\boxed{1.8\times10^3\,\mathrm J}.
+\begin{aligned}
+Q_{\mathrm I}&=\Delta U_{\mathrm I}+W_{\mathrm I}\\
+&=\boxed{\frac52p_0V_0}.
+\end{aligned}
 \]
-\textbf{(2)} 体積一定では $T\propto p$ である。
+}{
+\labelhead{(3) 操作 II：定積加熱}
+ピストンを固定している。
 \[
-T'=T\frac{p'}p=300\times\frac{1.5\times10^5}{1.0\times10^5}
-=\boxed{4.5\times10^2\,\mathrm K},
+\boxed{W_{\mathrm{II}}=0}.
 \]
+温度は $2T_0$ だけ上昇する。
 \[
-\Delta U=\frac32nR(T'-T)
-=\frac32\times0.50\times8.0\times150
-=\boxed{9.0\times10^2\,\mathrm J}.
+\begin{aligned}
+Q_{\mathrm{II}}&=\Delta U_{\mathrm{II}}\\
+&=\frac32nR(4T_0-2T_0)\\
+&=\boxed{3p_0V_0}.
+\end{aligned}
 \]
+}
 
+% 8 / 14
 \newpage
-\pagehead{第4問\quad 熱気球が浮く条件\quad 〔解答〕}
-{\fontsize{18}{24}\selectfont
-\textbf{(1)} 内外の圧力は等しく、同じ空気なので $\rho T=\rho_0T_0$。
+\pagehead{第2問\quad 断熱圧縮後の温度と仕事}
+\cols{
+\labelhead{(4) 断熱圧縮後の温度}
+$pV^{5/3}=\text{一定}$ と\par
+$pV=nRT$ から、
 \[
-\rho=\rho_0\frac{T_0}{T}=1.2\times\frac{300}{400}
-=\boxed{0.90\,\mathrm{kg/m^3}}.
+TV^{2/3}=\text{一定}.
 \]
-\textbf{(2)} 浮力は外気の密度を使って求める。
 \[
-\boxed{F_{\mathrm b}=\rho_0Vg=1.2\times10^3\times10=1.2\times10^4\,\mathrm N}.
+\begin{aligned}
+T_{\mathrm D}&=T_{\mathrm C}\left(\frac{V_{\mathrm C}}{V_{\mathrm D}}\right)^{2/3}\\
+&=\boxed{4\cdot2^{2/3}T_0}.
+\end{aligned}
 \]
-全重量は $(M+\rho V)g=(300+900)\times10=1.2\times10^4\,\mathrm N$ だから、
+体積を半分にするため、\par
+温度は上昇する。
+}{
+\labelhead{(4) 気体がされる仕事}
+断熱変化なので $Q=0$。
 \[
-\boxed{F_{\mathrm{net}}=F_{\mathrm b}-(M+\rho V)g=0\,\mathrm N}.
+\begin{aligned}
+W_{\mathrm{on}}&=\Delta U\\
+&=\frac32nR(T_{\mathrm D}-4T_0)\\
+&=\boxed{6p_0V_0(2^{2/3}-1)}.
+\end{aligned}
 \]
-\textbf{(3)} 静止状態から浮き上がる条件は、浮力が全重量より大きいこと。
+外部からの仕事の総量。\par
+外力 $F$ だけの仕事ではない。
+}
+
+% 9 / 14
+\newpage
+\pagehead{第3問\quad 初めの温度と内部エネルギー}
+\cols{
+\labelhead{(1) 初めの温度}
+状態方程式を使う。
 \[
-\rho_0Vg>\left(M+\rho_0\frac{T_0}{T}V\right)g
-\quad\Longrightarrow\quad
-T>\frac{300}{1-\frac{300}{1.2\times1000}}
-=\boxed{400\,\mathrm K}.
+T=\frac{pV}{nR}.
 \]
-\par}
-\vfill
-\note{$T=400\,\mathrm K$ ではつり合うだけなので、浮上には $T>400\,\mathrm K$ が必要。\\
-下部が開いているため、加熱中に内部の空気の質量は一定ではない。}
+\[
+\begin{aligned}
+pV&=1.2\times10^3\,\mathrm J,\\
+nR&=4.0\,\mathrm{J/K}.
+\end{aligned}
+\]
+\[
+T=\frac{1.2\times10^3}{4.0}
+=\boxed{3.0\times10^2\,\mathrm K}.
+\]
+}{
+\labelhead{(1) 内部エネルギー}
+単原子分子の理想気体では、
+\[
+U=\frac32nRT=\frac32pV.
+\]
+\[
+\begin{aligned}
+U&=\frac32\times1.2\times10^3\\
+&=\boxed{1.8\times10^3\,\mathrm J}.
+\end{aligned}
+\]
+}
+
+% 10 / 14
+\newpage
+\pagehead{第3問\quad 圧力が増加した後の状態}
+\cols{
+\labelhead{(2) 変化後の温度}
+体積は変わらない。\par
+温度は圧力に比例する。
+\[
+\begin{aligned}
+T'&=T\frac{p'}p\\
+&=300\times1.5\\
+&=\boxed{4.5\times10^2\,\mathrm K}.
+\end{aligned}
+\]
+}{
+\labelhead{(2) 内部エネルギーの変化}
+温度上昇は $150\,\mathrm K$。
+\[
+\begin{aligned}
+\Delta U&=\frac32nR(T'-T)\\
+&=\frac32\times4.0\times150\\
+&=\boxed{9.0\times10^2\,\mathrm J}.
+\end{aligned}
+\]
+内部エネルギーは増加する。
+}
+
+% 11 / 14
+\newpage
+\pagehead{第4問\quad 内部の空気の密度}
+\cols{
+\labelhead{(1) 密度と温度の関係}
+内外の圧力は等しい。\par
+同じ空気の状態方程式より、
+\[
+\rho T=\rho_0T_0.
+\]
+\[
+\begin{aligned}
+\rho&=\rho_0\frac{T_0}{T}\\
+&=1.2\times\frac{300}{400}\\
+&=\boxed{0.90\,\mathrm{kg/m^3}}.
+\end{aligned}
+\]
+}{\centering\balloonfig}
+
+% 12 / 14
+\newpage
+\pagehead{第4問\quad 浮力と気球全体の重さ}
+\cols{
+\labelhead{(2) 浮力}
+押しのけた外気の重さ。\par
+外気の密度を使って求める。
+\[
+\begin{aligned}
+F_{\mathrm b}&=\rho_0Vg\\
+&=1.2\times1000\times10\\
+&=\boxed{1.2\times10^4\,\mathrm N}.
+\end{aligned}
+\]
+}{
+\labelhead{(2) 内部の空気と全重量}
+内部の空気の質量は、
+\[
+\rho V=0.90\times1000=900\,\mathrm{kg}.
+\]
+本体などの質量も足す。
+\[
+\begin{aligned}
+(M+\rho V)g&=(300+900)\times10\\
+&=1.2\times10^4\,\mathrm N.
+\end{aligned}
+\]
+}
+
+% 13 / 14
+\newpage
+\pagehead{第4問\quad 上向きの合力と浮上条件}
+\cols{
+\labelhead{(2) 上向きの合力}
+上向きを正として、
+\[
+\begin{aligned}
+F_{\mathrm{net}}&=F_{\mathrm b}-(M+\rho V)g\\
+&=1.2\times10^4-1.2\times10^4\\
+&=\boxed{0\,\mathrm N}.
+\end{aligned}
+\]
+$T=400\,\mathrm K$ では、\par
+浮力と全重量がつり合う。
+}{
+\labelhead{(3) 浮き上がる条件}
+静止状態からの浮上には、\par
+上向きの合力が必要。
+\[
+F_{\mathrm b}>(M+\rho V)g.
+\]
+両辺を $g$ で割ると、
+\[
+\rho_0V>M+\rho V.
+\]
+内部密度は、
+\[
+\rho=\rho_0\frac{T_0}{T}.
+\]
+}
+
+% 14 / 14
+\newpage
+\pagehead{第4問\quad 浮き上がる温度の条件}
+\cols{
+\labelhead{(3) 温度の不等式}
+前ページの式に代入する。
+\[
+\rho_0V>M+\rho_0V\frac{T_0}{T}.
+\]
+移項して整理すると、
+\[
+T>\frac{\rho_0VT_0}{\rho_0V-M}.
+\]
+ここで分母は正。
+\[
+\rho_0V-M=1200-300=900.
+\]
+}{
+\labelhead{(3) 温度の条件}
+\[
+T>\frac{1200\times300}{900}.
+\]
+したがって、
+\[
+\boxed{T>400\,\mathrm K}.
+\]
+$400\,\mathrm K$ ではつり合う。\par
+浮上にはそれより高温が必要。
+\par
+下部は開いているので、\par
+内部の空気の質量は変わる。
+}
 \end{document}

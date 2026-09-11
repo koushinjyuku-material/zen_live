@@ -1,32 +1,35 @@
 \documentclass[20pt]{extarticle}
-\usepackage[paperwidth=320mm,paperheight=180mm,left=15mm,right=15mm,top=12mm,bottom=13mm,footskip=6mm]{geometry}
+% PowerPoint widescreen: 13 1/3 in x 7 1/2 in. 1 bp = 1/72 in.
+\usepackage[paperwidth=960bp,paperheight=540bp,left=42bp,right=42bp,top=30bp,bottom=30bp]{geometry}
 \usepackage{fontspec,xeCJK,amsmath,amssymb,unicode-math}
 \setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf]
 \setCJKmainfont{HaranoAjiMincho-Regular.otf}[BoldFont=HaranoAjiMincho-Bold.otf]
 \setmathfont{latinmodern-math.otf}
-\usepackage{tikz,booktabs,array,fancyhdr,hyperref}
+\usepackage{tikz,booktabs,array,hyperref}
 \usetikzlibrary{arrows.meta,patterns,decorations.markings}
 \hypersetup{unicode=true,colorlinks=false,pdfborder={0 0 0}}
+% All prose, headings, annotations and figure labels share the same 28 bp size.
+\renewcommand{\normalsize}{\fontsize{28bp}{38bp}\selectfont}
+\DeclareMathSizes{28.105}{28.105}{19.674}{14.0525}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
+\setlength{\parskip}{8bp}
 \setlength{\emergencystretch}{2em}
-\linespread{1.0}
-\AtBeginDocument{\raggedright
-\setlength{\abovedisplayskip}{8pt}\setlength{\belowdisplayskip}{8pt}
-\setlength{\abovedisplayshortskip}{5pt}\setlength{\belowdisplayshortskip}{5pt}}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[L]{\fontsize{10}{12}\selectfont Zenstudy \quad 熱力学}
-\fancyfoot[R]{\fontsize{10}{12}\selectfont\thepage}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\newcommand{\pagehead}[1]{{\fontsize{25}{31}\selectfont\bfseries #1\par}\vspace{2mm}\hrule\vspace{6mm}}
-\newcommand{\ask}[2]{\par\vspace{2mm}\textbf{(#1)}\quad #2\par}
-\newcommand{\note}[1]{{\fontsize{14}{18}\selectfont #1\par}}
+\AtBeginDocument{\normalsize\raggedright
+\setlength{\abovedisplayskip}{8bp}\setlength{\belowdisplayskip}{8bp}
+\setlength{\abovedisplayshortskip}{5bp}\setlength{\belowdisplayshortskip}{5bp}}
+\pagestyle{empty}
+\newcommand{\pagehead}[1]{\noindent\textbf{#1}\hfill\thepage\par\vspace{2bp}\hrule\vspace{14bp}}
+% 420 bp / 28 bp = 15 full-width Japanese characters.
+\newcommand{\cols}[2]{\noindent
+\begin{minipage}[t]{420bp}\vspace{0pt}\raggedright #1\end{minipage}\hfill
+\begin{minipage}[t]{420bp}\vspace{0pt}\raggedright #2\end{minipage}\par}
+\newcommand{\labelhead}[1]{\textbf{#1}\par}
+\newcommand{\ask}[2]{\par\textbf{(#1)}\quad #2\par}
+\newcommand{\note}[1]{#1\par}
 \newcommand{\cyclefig}{%
-\begin{tikzpicture}[x=23mm,y=30mm,>=Stealth,line width=.8pt,font=\normalsize]
-\draw[->] (0,0)--(3.7,0) node[right]{$V$};
-\draw[->] (0,0)--(0,2.65) node[above]{$p$};
+\begin{tikzpicture}[x=80bp,y=98bp,>=Stealth,line width=1bp,font=\normalsize]
+\draw[->] (0,0)--(3.8,0) node[right]{$V$};
+\draw[->] (0,0)--(0,2.7) node[above]{$p$};
 \node[below left] at (0,0) {$\mathrm O$};
 \draw[densely dashed,black!45] (0,1)--(1,1) (0,2)--(1,2) (1,0)--(1,1) (3,0)--(3,1);
 \node[left] at (0,1) {$p_0$}; \node[left] at (0,2) {$2p_0$};
@@ -34,41 +37,43 @@
 \draw[thick,postaction={decorate},decoration={markings,mark=at position .52 with {\arrow{Stealth}}}] (1,1)--(1,2);
 \draw[thick,postaction={decorate},decoration={markings,mark=at position .52 with {\arrow{Stealth}}}] (1,2)--(3,1);
 \draw[thick,postaction={decorate},decoration={markings,mark=at position .52 with {\arrow{Stealth}}}] (3,1)--(1,1);
-\foreach \x/\y in {1/1,1/2,3/1}{\fill (\x,\y) circle(1.4pt);}
+\foreach \x/\y in {1/1,1/2,3/1}{\fill (\x,\y) circle(2bp);}
 \node[below left] at (1,1) {$\mathrm A$}; \node[above right] at (1,2) {$\mathrm B$}; \node[above right] at (3,1) {$\mathrm C$};
 \end{tikzpicture}}
 \newcommand{\pistonfig}{%
-\begin{tikzpicture}[x=15mm,y=15mm,>=Stealth,line width=.85pt,font=\normalsize]
-\fill[black!3] (.25,.25) rectangle(3,3.25);
-\fill[pattern=north east lines,pattern color=black!45] (0,0) rectangle(.25,5);
-\fill[pattern=north east lines,pattern color=black!45] (3,0) rectangle(3.25,5);
-\fill[pattern=north east lines,pattern color=black!45] (0,0) rectangle(3.25,.25);
-\draw[thick] (0,5)--(0,0)--(3.25,0)--(3.25,5);
-\draw[thick] (.25,5)--(.25,.25)--(3,.25)--(3,5);
-\filldraw[fill=black!18,thick] (.25,3.25) rectangle(3,3.55);
-\node at (1.625,2.05) {理想気体};
-\node at (1.625,1.35) {$n,\ V_0,\ T_0$};
-\node at (1.625,5.4) {大気圧 $p_{\mathrm a}$};
-\draw[->,thick] (1.625,4.6)--(1.625,3.7) node[midway,right] {$Mg$};
-\draw (3.04,3.4)--(4,3.8);
-\node[above right,align=left,font=\small] at (3.8,3.8) {質量 $M$\\断面積 $S$};
-\draw[line width=2.2pt,white] (1.05,.125)--(2.2,.125);
-\draw[thick] (1.05,.125)--(2.2,.125);
-\draw (1.625,-.05)--(1.625,-.65);
-\node[below,font=\small] at (1.625,-.65) {熱の出入り口（開閉式）};
+\begin{tikzpicture}[x=1bp,y=1bp,>=Stealth,line width=1bp,font=\normalsize]
+\path[use as bounding box] (0,0) rectangle(420,380);
+\fill[black!3] (95,65) rectangle(300,225);
+\fill[pattern=north east lines,pattern color=black!45] (85,55) rectangle(95,330);
+\fill[pattern=north east lines,pattern color=black!45] (300,55) rectangle(310,330);
+\fill[pattern=north east lines,pattern color=black!45] (85,55) rectangle(310,65);
+\draw[thick] (85,330)--(85,55)--(310,55)--(310,330);
+\draw[thick] (95,330)--(95,65)--(300,65)--(300,330);
+\filldraw[fill=black!18,thick] (95,225) rectangle(300,245);
+\node at (197,166) {理想気体};
+\node at (197,115) {$n,\ V_0,\ T_0$};
+\node at (197,360) {大気圧 $p_{\mathrm a}$};
+\draw[->,thick] (197,317)--(197,252) node[midway,right] {$Mg$};
+\draw (305,235)--(335,255);
+\node[right] at (329,260) {$M,S$};
+\draw[line width=3bp,white] (162,60)--(232,60);
+\draw[thick] (162,60)--(232,60);
+\draw (197,55)--(197,37);
+\node at (197,16) {熱の出入り口};
 \end{tikzpicture}}
 \newcommand{\balloonfig}{%
-\begin{tikzpicture}[x=13mm,y=13mm,>=Stealth,line width=.85pt,font=\normalsize]
-\draw[thick,fill=black!3] (1.25,.8) .. controls (.9,1.4) and (-.1,2.2) .. (0,3.25)
-.. controls (.2,5.5) and (3.8,5.5) .. (4,3.25)
-.. controls (4.1,2.2) and (3.1,1.4) .. (2.75,.8);
-\draw[thick] (1.25,.8)--(1.75,.8) (2.25,.8)--(2.75,.8);
-\draw (1.3,.7)--(1.55,-.2) (2.7,.7)--(2.45,-.2);
-\draw[fill=black!10] (1.5,-.2) rectangle(2.5,-.8);
-\node at (2,3.3) {$V,\ T,\ \rho$};
-\node[font=\small] at (2,2.45) {内部の空気};
-\draw[->,thick] (2,5.1)--(2,6.1) node[right] {$F_{\mathrm b}$};
-\draw (2,.8)--(3.6,.25);
-\node[right,font=\small] at (3.6,.25) {下部の開口};
-\node[below,font=\small] at (2,-1) {本体・かごなど $M$};
+\begin{tikzpicture}[x=1bp,y=1bp,>=Stealth,line width=1bp,font=\normalsize]
+\path[use as bounding box] (0,0) rectangle(420,390);
+\draw[thick,fill=black!3] (148,106) .. controls (125,142) and (62,182) .. (65,238)
+.. controls (75,350) and (315,350) .. (325,238)
+.. controls (328,182) and (265,142) .. (242,106);
+\draw[thick] (148,106)--(180,106) (210,106)--(242,106);
+\draw (150,100)--(165,63) (240,100)--(225,63);
+\draw[fill=black!10] (160,63) rectangle(230,38);
+\node at (195,246) {$V,\ T,\ \rho$};
+\node at (195,199) {内部の空気};
+\draw[->,thick] (195,326)--(195,379) node[right] {$F_{\mathrm b}$};
+\draw (195,106)--(299,84);
+\node[right] at (292,77) {開口};
+\node at (195,14) {本体など $M$};
 \end{tikzpicture}}

@@ -6,7 +6,7 @@ import re
 
 lesson = Path(__file__).resolve().parent
 source = lesson / "source"
-scratch = lesson.parents[1] / "tmp" / "pdfs" / "thermodynamics_v2"
+scratch = lesson.parents[1] / "tmp" / "pdfs" / "thermodynamics_v3"
 output = lesson / "output" / "pdf"
 scratch.mkdir(parents=True, exist_ok=True)
 output.mkdir(parents=True, exist_ok=True)
@@ -21,7 +21,7 @@ for stem, filename in [("problems", "熱力学_問題.pdf"), ("answers", "熱力
         raise RuntimeError(f"{stem}: 組版のはみ出し・欠落を確認してください。")
     info = subprocess.check_output(["pdfinfo", str(scratch / f"{stem}.pdf")], text=True)
     pages = int(re.search(r"Pages:\s+(\d+)", info).group(1))
-    expected_pages = {"problems": 5, "answers": 6}[stem]
+    expected_pages = {"problems": 9, "answers": 14}[stem]
     if pages != expected_pages:
         raise RuntimeError(f"{stem}: {pages}ページです。意図しない改ページを確認してください。")
     shutil.copy2(scratch / f"{stem}.pdf", output / filename)
